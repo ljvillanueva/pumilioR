@@ -1,2 +1,2 @@
-import("tuneR", "seewave", "XLM")
+import("XML")
 exportPattern("^[[:alpha:]]+")

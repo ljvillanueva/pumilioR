@@ -1,5 +1,7 @@
 \name{pumilioR}
 
+\alias{pumilioR}
+
 \docType{package}
 
 \title{pumilioR}
