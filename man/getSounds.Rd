@@ -11,10 +11,10 @@
 	}
 
 \arguments{
-	\item{pumilio_URL}{ URL of the Pumilio installation, for example: "http://server.com/pumilio" }
+	\item{pumilio_URL}{ URL of the Pumilio installation, for example: "http://server.com/pumilio/" }
 	\item{SiteID}{ ID of a valid site, obtained using \code{getSites} }
 	\item{ColID}{ ID of a valid collection, obtained using \code{getCollections} }
-	\item{type}{ type of query to run: \"all\" to get all sounds in the archive; \"site\" for the site specified with \code{SiteID}; \"col\" for the collection specified with \code{ColID}; \"both\" for sounds that match both the site specified with \code{SiteID} and the collection specified with \code{ColID}. }
+	\item{type}{ type of query to run: "all" to get all sounds in the archive; "site" for the site specified with \code{SiteID}; "col" for the collection specified with \code{ColID}; "both" for sounds that match both the site specified with \code{SiteID} and the collection specified with \code{ColID}. }
 	}
 
 \value{

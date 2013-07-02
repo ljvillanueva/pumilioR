@@ -11,7 +11,7 @@
 	}
 
 \arguments{
-	\item{pumilio_URL}{ URL of the Pumilio installation, for example: "http://server.com/pumilio" }
+	\item{pumilio_URL}{ URL of the Pumilio installation, for example: "http://server.com/pumilio/" }
 	}
 
 \value{

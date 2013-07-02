@@ -5,7 +5,6 @@ Date: 2013-06-29
 Author: Luis J. Villanueva-Rivera
 Maintainer: Luis J. Villanueva-Rivera <ljvillanueva@coquipr.com>
 Description: R package to query and get data out of a Pumilio system.
-Depends: R(>= 2.12.1)
-Imports: XML
+Depends: R(>= 2.12.1), XML
 License: GPL-3
 URL: http://ljvillanueva.github.io/pumilioR/
