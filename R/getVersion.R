@@ -2,9 +2,16 @@ getVersion <- function(pumilio_URL){
 	
 	pumilio_XML_URL <- paste(pumilio_URL, "xml.php", sep="")
 	
-	#Get XML contents
-	pumilio_XML <- xmlTreeParse(pumilio_XML_URL, isURL = TRUE)
+	#check valid url
+	badurl <- function(ret, ...){
+		if (ret!=0){
+			error=stop("Could not open the XML file, please verify the URL is correct and that the permissions are set correctly.")
+			}
+		}
 	
+	#Get XML contents
+	pumilio_XML <- xmlTreeParse(pumilio_XML_URL, isURL = TRUE, error=badurl)
+		
 	pumilio_list <- xmlToList(node=pumilio_XML, addAttributes=TRUE)
 	
 	pumilio_version <- pumilio_list$pumilio_version
