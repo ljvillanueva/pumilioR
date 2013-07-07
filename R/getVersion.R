@@ -3,10 +3,8 @@ getVersion <- function(pumilio_URL){
 	pumilio_XML_URL <- paste(pumilio_URL, "xml.php", sep="")
 	
 	#check valid url
-	badurl <- function(ret, ...){
-		if (ret!=0){
-			error=stop("Could not open the XML file, please verify the URL is correct and that the permissions are set correctly.")
-			}
+	badurl <- function(...){
+		stop("Could not open the XML file, please verify the URL is correct and that the permissions are set correctly.")
 		}
 	
 	#Get XML contents
