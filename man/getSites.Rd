@@ -11,20 +11,20 @@
 	}
 
 \arguments{
-	\item{pumilio_URL}{ URL of the Pumilio installation, for example: "http://server.com/pumilio/" }
+	\item{pumilio_URL}{ URL of the Pumilio installation, with trailing slash. For example: "http://server.com/pumilio/" }
 	}
 
 \value{
 	Returns a data frame with the sites data.
-	\item{SiteID}{ ID of the site. }
-	\item{SiteName}{ name of the site. }
-	\item{latitude}{ latitude of the site, in decimal degrees. }
-	\item{longitude}{ longitude of the site, in decimal degrees. }
-	\item{elevation}{ elevation of the site, in meters above sea level. }
-	\item{notes}{ notes of the site. }
+	\item{SiteID}{ ID of the site }
+	\item{SiteName}{ name of the site }
+	\item{latitude}{ latitude of the site, in decimal degrees }
+	\item{longitude}{ longitude of the site, in decimal degrees }
+	\item{elevation}{ elevation of the site, in meters above sea level }
+	\item{notes}{ notes of the site }
 	}
 
-\author{Luis J. Villanueva-Rivera}
+%\author{Luis J. Villanueva-Rivera}
 
 %\examples{
 %	}

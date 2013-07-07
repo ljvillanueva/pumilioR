@@ -17,7 +17,7 @@
 \value{
 	Returns a boolean if the Pumilio version matches the requirement.}
 
-\author{Luis J. Villanueva-Rivera}
+%\author{Luis J. Villanueva-Rivera}
 
 %\examples{
 %	}
