@@ -13,8 +13,8 @@
 	\tabular{ll}{
 		Package: \tab pumilioR\cr
 		Type: \tab Package\cr
-		Version: \tab 1.0\cr
-		Date: \tab 2013-07-08\cr
+		Version: \tab 1.1\cr
+		Date: \tab 2014-01-02\cr
 		License: \tab GPLv3\cr
 		}
 	}

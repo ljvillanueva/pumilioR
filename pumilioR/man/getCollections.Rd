@@ -27,8 +27,9 @@
 
 %\author{Luis J. Villanueva-Rivera}
 
-%\examples{
-%	}
+\examples{
+cols <- getCollections(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")
+cols[1,]}
 
 %\references{
  %}

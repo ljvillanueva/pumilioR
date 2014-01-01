@@ -1,6 +1,6 @@
 getCollections <- function(pumilio_URL){
 	
-	if (getVersion(pumilio_URL)==FALSE){
+	if (getVersion(pumilio_URL) == FALSE){
 		stop(" pumilioR only works with Pumilio version 2.6.0 or newer.")
 	}
 	
@@ -9,9 +9,9 @@ getCollections <- function(pumilio_URL){
 	#Get XML contents
 	pumilio_XML <- xmlTreeParse(pumilio_XML_URL, isURL = TRUE)
 	
-	pumilio_list <- xmlToList(node=pumilio_XML, addAttributes=TRUE)
+	pumilio_list <- xmlToList(node = pumilio_XML, addAttributes = TRUE)
 	
 	cols_list <- pumilio_list$Collections
 	
-	invisible(as.data.frame(t(cols_list), row.names=FALSE))
+	invisible(as.data.frame(t(cols_list), row.names = FALSE))
 }
