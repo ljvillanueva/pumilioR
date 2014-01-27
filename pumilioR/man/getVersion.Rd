@@ -19,8 +19,16 @@
 
 %\author{Luis J. Villanueva-Rivera}
 
-%\examples{
-%	}
+\examples{
+ getVersion(pumilio_URL="http://pumilio.coquipr.com/pumilio/")
+	}
+
+\note{
+  For websites that require basic authentication, enter them in the 
+  URL. For example:
+  
+  \code{getVersion(pumilio_URL = "http://username:password@pumilio.coquipr.com/pumilio/")}
+}
 
 %\references{
  %}

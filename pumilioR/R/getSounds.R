@@ -11,7 +11,7 @@ getSounds <- function(pumilio_URL, SiteID = NA, ColID = NA, type = "all"){
 	
 	pumilio_XML_URL <- paste(pumilio_URL, "xml.php", sep="")
 	
-	this_site_sounds <- xmlTreeParse(paste(pumilio_XML_URL, "?type=", type, "&SiteID=", SiteID, "&ColID=", ColID, sep=""), isURL = TRUE)
+	this_site_sounds <- xmlTreeParse(getURL(paste(pumilio_XML_URL, "?type=", type, "&SiteID=", SiteID, "&ColID=", ColID, sep="")))
 	sounds_list <- xmlToList(node = this_site_sounds, addAttributes = TRUE)
 	
 	#Get sounds from parsed XML

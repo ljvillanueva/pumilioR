@@ -1,2 +1,2 @@
-import("XML")
+import("XML","RCurl")
 exportPattern("^[[:alpha:]]+")

@@ -7,12 +7,14 @@
 \description{Function to download one sound file, specified with \code{SoundID}, to the working directory from the result of a query using \code{getSounds}.}
 
 \usage{
-	getFile(result, SoundID=NA)
+	getFile(result, SoundID=NA, username=NA, password=NA)
 	}
 
 \arguments{
 	\item{result}{ the result of the function \code{getSounds} }
 	\item{SoundID}{ ID of a valid record, obtained using \code{getSounds} }
+  \item{username}{ username when getting files from webservers that require basic authentication }
+  \item{password}{ password for the username when getting files from webservers that require basic authentication }
 	}
 
 \value{

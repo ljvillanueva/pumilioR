@@ -7,7 +7,7 @@ getCollections <- function(pumilio_URL){
 	pumilio_XML_URL <- paste(pumilio_URL, "xml.php", sep="")
 	
 	#Get XML contents
-	pumilio_XML <- xmlTreeParse(pumilio_XML_URL, isURL = TRUE)
+	pumilio_XML <- xmlTreeParse(getURL(pumilio_XML_URL))
 	
 	pumilio_list <- xmlToList(node = pumilio_XML, addAttributes = TRUE)
 	

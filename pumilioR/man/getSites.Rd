@@ -30,6 +30,14 @@
 sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")	
 sites[1,]}
 
+\note{
+  For websites that require basic authentication, enter them in the 
+  URL. Using the same example:
+  
+  \code{sites <- getSites(pumilio_URL = "http://username:password@pumilio.coquipr.com/pumilio/")}
+  
+  \code{sites[1,]}
+}
 
 %\references{
  %}

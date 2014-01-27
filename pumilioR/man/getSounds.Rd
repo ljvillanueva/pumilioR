@@ -53,6 +53,15 @@
 	sounds[1,]
 	}
 
+\note{
+  For websites that require basic authentication, enter them in the 
+  URL. Using the same example:
+  
+  \code{sounds <- getSounds(pumilio_URL="http://username:password@pumilio.coquipr.com/pumilio/",
+  	SiteID=111, type="site")}
+	\code{sounds[1,]}
+}
+
 %\references{
  %}
 
