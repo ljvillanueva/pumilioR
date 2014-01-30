@@ -6,7 +6,7 @@
 
 \title{pumilioR}
 
-\description{Functions to get data from a Pumilio sound archive system (http://pumilio.sourceforge.net). 
+\description{Functions to get data from a Pumilio sound archive system (http://ljvillanueva.github.io/pumilio/). 
 	Requires version 2.6.0, or newer, of Pumilio installed and XML turned on in the Admin menu.}
 
 \details{

@@ -1,8 +1,12 @@
-getVersion <- function(pumilio_URL){
+getVersion <- function(pumilio_URL, credentials = NA){
 	
+  if (!is.na(credentials)){
+    pumilio_URL <- gsub("http://", paste("http://", credentials, "@", sep=""), pumilio_URL)
+  }
+  
 	pumilio_XML_URL <- paste(pumilio_URL, "xml.php", sep = "")
 	
-	#check valid url
+  #check valid url
 	badurl <- function(...){
 		stop("Could not open the XML file, please verify the URL is correct and that the permissions are set correctly.")
 		}
@@ -14,7 +18,7 @@ getVersion <- function(pumilio_URL){
 	
 	pumilio_version <- pumilio_list$pumilio_version
 	
-	cat(paste("\n The site ", pumilio_URL, " is running version:\n\n   ", pumilio_version, "\n\n", sep=""))
+	#cat(paste("\n The site ", pumilio_URL, " is running version:\n\n   ", pumilio_version, "\n\n", sep=""))
   
 	if (length(pumilio_version) == 0){
 		return(FALSE)
