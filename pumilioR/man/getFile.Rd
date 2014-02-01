@@ -33,17 +33,6 @@
 	getFile(results, SoundID = 4078)}
 	}
 
-\note{
-   For websites that require basic authentication, use the \code{credentials} argument:
-  
-  \code{getSounds(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/",}
-  
-  \code{ SiteID=111, type="site", credentials = "pumilio:pumilio")}
-  
-  \code{#Then, get the file from the first row, identified with the SoundID = 4078
-  getFile(results, SoundID = 4078, credentials = "pumilio:pumilio")}
-}
-
 %\references{
  %}
 

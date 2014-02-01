@@ -33,14 +33,6 @@
 cols <- getCollections(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")
 cols[1,]}
 
-\note{
-  For websites that require basic authentication, use the \code{credentials} argument:
-  
-  \code{cols <- getCollections(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/",}
-  
-  \code{ credentials = "pumilio:pumilio")}
-}
-
 %\references{
  %}
 

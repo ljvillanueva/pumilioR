@@ -1,6 +1,6 @@
 <!--
 %\VignetteEngine{knitr}
-%\VignetteIndexEntry{Setting up Pumilio for pumilioR}
+%\VignetteIndexEntry{Setting up Pumilio for pumilioR and usage}
 -->
 
 # Setting up Pumilio and usage of the *pumilioR* Package #
@@ -25,7 +25,7 @@ To limit the access to valid users registered in the Pumilio system, set the opt
 
 to Users. To allow anyone to query the system set it to Any.
 
-## *pumilioR* Setup ##
+## Check access ##
 
 Assign the URL of the Pumilio archive to a variable to simplify the rest of the commands. For example:
 
@@ -33,15 +33,56 @@ Assign the URL of the Pumilio archive to a variable to simplify the rest of the 
 #Load the package
 library(pumilioR)
 
-#Assign the URL to a variable
-pum <- "http://pumilio.coquipr.com/pumilio/"
-
 #Check that the system can use pumilioR, returns TRUE if it is allowed and the version supports it
-version <- getVersion(pumilio_URL = pum)
+access <- checkVersion(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")
 
-version
+access
 ```
 
+
+
+
+
+## Querying the system ##
+
+To query the system, use the functions *getCollections()* or *getSites()* to get a data frame with the collections and the sites, respectively, in the system. Then, you can get the sounds for that collection or site using the function *getSounds()*. For example:
+
+```{r results='show', message=FALSE, warning=FALSE}
+#Get all collections
+cols <- getCollections(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")
+
+#Show the first row
+cols[1,]
+
+#Get all sites
+sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")	
+
+#Show the first row
+sites[1,]
+
+#Get all the sounds in the site with the SiteID = 111
+sounds <- getSounds(pumilio_URL="http://pumilio.coquipr.com/pumilio/", SiteID=102, type="site")
+
+#Show the first row
+sounds[1,]
+```
+
+## Download files ##
+
+Once a result is obtained from the system, the audio file can be downloaded using the function *getFile()*. This function needs the result of either *getCollections()* or *getSites()* and the SoundID of the desired file.
+
+```{r results='show', message=FALSE, warning=FALSE}
+#First, get a list of results
+results <- getSounds(pumilio_URL="http://pumilio.coquipr.com/pumilio/", SiteID=111, type="site")
+
+results[1,]
+```
+
+Then, get the file from the first row, identified with the SoundID 4078. The audio file is saved in the working directory.
+
+```
+getFile(results, SoundID = 4078)
+```
 
 
 
@@ -73,7 +114,7 @@ sites[1,]
 
 ## Package website ##
 
-Please visit the package website for more information, and updates: http://ljvillanueva.github.io/pumilioR/
+Please visit the package website for more information and updates: http://ljvillanueva.github.io/pumilioR/
 
 For suggestions or to report bugs or problems: http://github.com/ljvillanueva/pumilioR/issues
 

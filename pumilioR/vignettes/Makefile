@@ -1,4 +1,4 @@
-VIGS= setup.html
+VIGS= intro.html
 
 all: $(VIGS)
 
