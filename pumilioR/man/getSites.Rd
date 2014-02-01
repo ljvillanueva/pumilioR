@@ -7,12 +7,13 @@
 \description{Function to get the sites with sounds from Pumilio.}
 
 \usage{
-	getSites(pumilio_URL, credentials = NA)
+	getSites(pumilio_URL, credentials = NA, pumiliologin = NA)
 	}
 
 \arguments{
 	\item{pumilio_URL}{ URL of the Pumilio installation, with trailing slash. For example: "http://server.com/pumilio/" }
-   \item{credentials}{ username and password, separated with a colon, for websites that require basic authentication }
+   \item{credentials}{ username and password, separated with a colon, for websites that require basic Apache webserver authentication }
+   \item{pumiliologin}{ username and password, separated with a colon, for Pumilio systems that require a valid user }
 	}
 
 \value{
@@ -32,13 +33,13 @@ sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")
 sites[1,]}
 
 \note{
-  For websites that require basic authentication, use the \code{credentials} argument:
-  
-  \code{sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio/",}
-  
-  \code{ credentials = "username:password")}
-  
-  \code{sites[1,]}
+	For websites that require basic authentication, use the \code{credentials} argument:
+	
+	\code{sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/",}
+	
+	\code{ credentials = "pumilio:pumilio")}
+	
+	\code{sites[1,]}
 }
 
 %\references{

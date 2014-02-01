@@ -1,4 +1,4 @@
-CHANGES IN VERSION 1.2 (2014-01-30)
+CHANGES IN VERSION 1.2 (2014-01-31)
 -----------------------
 
   o Now uses the 'RCurl' package to be able to get data from websites that require a username and password and for future expansion.

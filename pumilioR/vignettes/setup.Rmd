@@ -1,0 +1,86 @@
+<!--
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Setting up Pumilio for pumilioR}
+-->
+
+# Setting up Pumilio and usage of the *pumilioR* Package #
+
+## Introduction ##
+
+The *pumilioR* package has functions to get data and sound files from the web-based sound archive system Pumilio (http://ljvillanueva.github.io/pumilio). This introduction will provide a brief overview of setting up Pumilio and examples of how to query the system and extract both data and soundfiles.
+
+*pumilioR* requires R version 2.14, or newer, and depends on the packages *XML* and *RCurl*.
+
+## Pumilio Setup ##
+
+To allow the use of the package, log in as an administrator to the Pumilio system. Click the Admin menu link (on the top right edge of the page). On the main settings page of the Admin menu, under "System behavior", there is an option:
+
+ - Allow access using XML: Yes/No
+ 
+Set it to Yes. Now *pumilioR*, and other programs, can read data from the archive using XML.
+
+To limit the access to valid users registered in the Pumilio system, set the option:
+
+ - Who can access via XML: Any/Users
+
+to Users. To allow anyone to query the system set it to Any.
+
+## *pumilioR* Setup ##
+
+Assign the URL of the Pumilio archive to a variable to simplify the rest of the commands. For example:
+
+```{r results='show', message=FALSE, warning=FALSE}
+#Load the package
+library(pumilioR)
+
+#Assign the URL to a variable
+pum <- "http://pumilio.coquipr.com/pumilio/"
+
+#Check that the system can use pumilioR, returns TRUE if it is allowed and the version supports it
+version <- getVersion(pumilio_URL = pum)
+
+version
+```
+
+
+
+
+
+## Apache Basic Authentication ##
+
+Basic authentication can be used on the Apache webserver as a way to limit access to the data by requiring a username and password. This is outside the scope of this vignette. Since version 1.2 of *pumilioR* these sites can be accessed providing the username and password, separated with a colon, to the argument *credentials* in each function.
+
+```{r results='show', message=FALSE, warning=FALSE}
+
+sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/", credentials = "pumilio:pumilio")
+
+sites[1,]
+```
+
+## Pumilio User Authentication ##
+
+Since version 1.2 of *pumilioR* and version 2.7.0 of Pumilio, the system can be accessed providing a valid username and password, separated with a colon, already registered in the system to the argument *pumiliologin* in each function.
+
+```{r results='show', message=FALSE, warning=FALSE}
+library(pumilioR)
+
+sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio3/", pumiliologin = "pumilio:pumilio")
+
+sites[1,]
+```
+
+
+
+## Package website ##
+
+Please visit the package website for more information, and updates: http://ljvillanueva.github.io/pumilioR/
+
+For suggestions or to report bugs or problems: http://github.com/ljvillanueva/pumilioR/issues
+
+The package page in CRAN is http://cran.r-project.org/web/packages/pumilioR/
+
+- - -
+
+Vignette "Setting up Pumilio and usage of the *pumilioR* Package" by LJ Villanueva-Rivera
+
+*Version 1.0 (1 February 2014)*

@@ -7,12 +7,13 @@
 \description{Function to get the collections with sounds from Pumilio.}
 
 \usage{
-	getCollections(pumilio_URL, credentials = NA)
+	getCollections(pumilio_URL, credentials = NA, pumiliologin = NA)
 	}
 
 \arguments{
 	\item{pumilio_URL}{ URL of the Pumilio installation, with trailing slash. For example: "http://server.com/pumilio/" }
-  \item{credentials}{ username and password, separated with a colon, for websites that require basic authentication }
+	\item{credentials}{ username and password, separated with a colon, for websites that require basic Apache webserver authentication }
+	\item{pumiliologin}{ username and password, separated with a colon, for Pumilio systems that require a valid user }
 	}
 
 \value{
@@ -35,9 +36,9 @@ cols[1,]}
 \note{
   For websites that require basic authentication, use the \code{credentials} argument:
   
-  \code{cols <- getCollections(pumilio_URL = "http://pumilio.coquipr.com/pumilio/",}
+  \code{cols <- getCollections(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/",}
   
-  \code{ credentials = "username:password")}
+  \code{ credentials = "pumilio:pumilio")}
 }
 
 %\references{

@@ -14,7 +14,7 @@
 		Package: \tab pumilioR\cr
 		Type: \tab Package\cr
 		Version: \tab 1.2\cr
-		Date: \tab 2014-02-02\cr
+		Date: \tab 2014-01-31\cr
 		License: \tab GPLv3\cr
 		}
 	}
