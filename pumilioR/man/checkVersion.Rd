@@ -27,14 +27,6 @@
 	access
 	}
 
-\note{
-   For websites that require basic authentication, use the \code{credentials} argument:
-  
-  \code{checkVersion(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/",}
-  
-  \code{credentials = "pumilio:pumilio")}
-}
-
 %\references{
  %}
 

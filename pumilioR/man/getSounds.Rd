@@ -7,7 +7,8 @@
 \description{Function to get the data from sounds that match the search query.}
 
 \usage{
-	getSounds(pumilio_URL, SiteID=NA, ColID=NA, type="all", credentials = NA, pumiliologin = NA)
+	getSounds(pumilio_URL, SiteID=NA, ColID=NA, type="all", 
+		credentials = NA, pumiliologin = NA)
 	}
 
 \arguments{
