@@ -56,16 +56,6 @@
 	sounds[1,]
 	}
 
-\note{
-	For websites that require basic authentication, use the \code{credentials} argument:
-  
-	\code{sounds <- getSounds(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/",}
-  
-	\code{ SiteID = 111, type = "site", credentials = "pumilio:pumilio")}
-  
-	\code{sounds[1,]}
-}
-
 %\references{
  %}
 

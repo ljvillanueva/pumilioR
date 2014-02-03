@@ -6,6 +6,8 @@ Author: Luis J. Villanueva-Rivera
 Maintainer: Luis J. Villanueva-Rivera <ljvillanueva@coquipr.com>
 Description: R package to query and get data out of a Pumilio sound archive system (http://ljvillanueva.github.io/pumilio/).
 Depends: R(>= 2.14.0), XML, RCurl
+Suggests: knitr
 License: GPL-3
 URL: http://ljvillanueva.github.io/pumilioR/
+BugReports: https://github.com/ljvillanueva/pumilioR/issues
 VignetteBuilder: knitr

@@ -3,13 +3,17 @@
 %\VignetteIndexEntry{Setting up Pumilio for pumilioR and usage}
 -->
 
-# Setting up Pumilio and usage of the *pumilioR* Package #
+# Setting up Pumilio and Usage of the *pumilioR* Package #
 
 ## Introduction ##
 
 The *pumilioR* package has functions to get data and sound files from the web-based sound archive system Pumilio (http://ljvillanueva.github.io/pumilio). This introduction will provide a brief overview of setting up Pumilio and examples of how to query the system and extract both data and soundfiles.
 
-*pumilioR* requires R version 2.14, or newer, and depends on the packages *XML* and *RCurl*.
+*pumilioR* requires R version 2.14, or newer, and depends on the packages *XML* and *RCurl*. 
+
+The source of the package is kept at Github: https://github.com/ljvillanueva/pumilioR
+
+The website of the package is http://ljvillanueva.github.io/pumilioR/
 
 ## Pumilio Setup ##
 
@@ -27,7 +31,7 @@ to Users. To allow anyone to query the system set it to Any.
 
 ## Check access ##
 
-Assign the URL of the Pumilio archive to a variable to simplify the rest of the commands. For example:
+Before querying the system, first check that it is properly configured and that you can access it, for example:
 
 ```{r results='show', message=FALSE, warning=FALSE}
 #Load the package
@@ -60,7 +64,7 @@ sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")
 #Show the first row
 sites[1,]
 
-#Get all the sounds in the site with the SiteID = 111
+#Get all the sounds in the site with the SiteID = 102
 sounds <- getSounds(pumilio_URL="http://pumilio.coquipr.com/pumilio/", SiteID=102, type="site")
 
 #Show the first row
@@ -122,6 +126,6 @@ The package page in CRAN is http://cran.r-project.org/web/packages/pumilioR/
 
 - - -
 
-Vignette "Setting up Pumilio and usage of the *pumilioR* Package" by LJ Villanueva-Rivera
+Vignette "Setting up Pumilio and Usage of the *pumilioR* Package" by LJ Villanueva-Rivera
 
 *Version 1.0 (1 February 2014)*

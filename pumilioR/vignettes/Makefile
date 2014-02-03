@@ -1,4 +1,4 @@
-VIGS= intro.html
+VIGS= pumiliosetup.html
 
 all: $(VIGS)
 
