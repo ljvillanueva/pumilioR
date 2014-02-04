@@ -33,7 +33,7 @@ to Users. To allow anyone to query the system set it to Any.
 
 Before querying the system, first check that it is properly configured and that you can access it, for example:
 
-```{r results='show', message=FALSE, warning=FALSE}
+```
 #Load the package
 library(pumilioR)
 
@@ -51,7 +51,7 @@ access
 
 To query the system, use the functions *getCollections()* or *getSites()* to get a data frame with the collections and the sites, respectively, in the system. Then, you can get the sounds for that collection or site using the function *getSounds()*. For example:
 
-```{r results='show', message=FALSE, warning=FALSE}
+```
 #Get all collections
 cols <- getCollections(pumilio_URL = "http://pumilio.coquipr.com/pumilio/")
 
@@ -75,7 +75,7 @@ sounds[1,]
 
 Once a result is obtained from the system, the audio file can be downloaded using the function *getFile()*. This function needs the result of either *getCollections()* or *getSites()* and the SoundID of the desired file.
 
-```{r results='show', message=FALSE, warning=FALSE}
+```
 #First, get a list of results
 results <- getSounds(pumilio_URL="http://pumilio.coquipr.com/pumilio/", SiteID=111, type="site")
 
@@ -95,7 +95,7 @@ getFile(results, SoundID = 4078)
 
 Basic authentication can be used on the Apache webserver as a way to limit access to the data by requiring a username and password. This is outside the scope of this vignette. Since version 1.2 of *pumilioR* these sites can be accessed providing the username and password, separated with a colon, to the argument *credentials* in each function.
 
-```{r results='show', message=FALSE, warning=FALSE}
+```
 
 sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/", credentials = "pumilio:pumilio")
 
@@ -106,7 +106,7 @@ sites[1,]
 
 Since version 1.2 of *pumilioR* and version 2.7.0 of Pumilio, the system can be accessed providing a valid username and password, separated with a colon, already registered in the system to the argument *pumiliologin* in each function.
 
-```{r results='show', message=FALSE, warning=FALSE}
+```
 library(pumilioR)
 
 sites <- getSites(pumilio_URL = "http://pumilio.coquipr.com/pumilio3/", pumiliologin = "pumilio:pumilio")
