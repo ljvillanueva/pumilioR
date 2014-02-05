@@ -33,6 +33,10 @@
 	getFile(results, SoundID = 4078)}
 	}
 
+\note{To use this function, the curl library needs to be installed. 
+		In Linux install libcurl-devel. For Windows the binaries 
+		are available at http://curl.haxx.se.}
+
 %\references{
  %}
 
