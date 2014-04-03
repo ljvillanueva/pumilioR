@@ -4,12 +4,19 @@ getFile <- function(result, SoundID = NA, credentials = NA, pumiliologin = NA){
 		stop(" SoundID cannot be empty.")
 	}
 	
-	if (!is.na(credentials)){
-		#Check if curl is installed
-		if (system("curl -V", ignore.stderr = TRUE)!=0){
-			stop("curl was not found")
-		}
-		
+	if (.Platform$OS.type == "windows") {
+    #Fix for Windows systems, rarely is CURL installed and the default way
+    # to download is very limited. This uses Internet Explorer functions
+	  setInternet2(TRUE)
+	}else{
+  	if (!is.na(credentials)){
+  		#Check if curl is installed
+  		if (system("curl -V", ignore.stderr = TRUE)!=0){
+  			stop("curl was not found")
+  		}
+  	}
+	}
+    
 		soundfilePath <- unlist(result[result$SoundID==SoundID,]$FilePath)
 		soundfilePath <- gsub("http://", paste("http://", credentials, "@", sep=""), soundfilePath)
 		localfile = basename(soundfilePath)
