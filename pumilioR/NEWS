@@ -1,3 +1,8 @@
+CHANGES IN VERSION 1.3 (2014-04-07)
+-----------------------
+
+  o Adds a way to download files from Windows when credentials are required since curl is usually not installed.
+
 CHANGES IN VERSION 1.2 (2014-02-01)
 -----------------------
 
