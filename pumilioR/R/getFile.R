@@ -1,4 +1,4 @@
-getFile <- function(result, SoundID = NA, credentials = NA, pumiliologin = NA){
+getFile <- function(result, SoundID = NA, credentials = NA){
 	#Function to download the file associated with a SoundID
 	if (is.na(SoundID)){
 		stop(" SoundID cannot be empty.")
@@ -6,8 +6,9 @@ getFile <- function(result, SoundID = NA, credentials = NA, pumiliologin = NA){
 	
 	soundfilePath <- unlist(result[result$SoundID==SoundID,]$FilePath)
 	localfile <- basename(soundfilePath)
-	
+
 	if (.Platform$OS.type == "windows") {
+		
 		if (!is.na(credentials)){
 			#Fix for Windows systems, rarely is CURL installed and the default way
 			# to download is very limited. This uses Internet Explorer functions

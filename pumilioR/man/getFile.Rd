@@ -7,14 +7,13 @@
 \description{Function to download one sound file, specified with \code{SoundID}, to the working directory from the result of a query using \code{getSounds}.}
 
 \usage{
-	getFile(result, SoundID = NA, credentials = NA, pumiliologin = NA)
+	getFile(result, SoundID = NA, credentials = NA)
 	}
 
 \arguments{
 	\item{result}{ the result of the function \code{getSounds} }
 	\item{SoundID}{ ID of a valid record, obtained using \code{getSounds} }
 	\item{credentials}{ username and password, separated with a colon, for websites that require basic Apache webserver authentication }
-	\item{pumiliologin}{ username and password, separated with a colon, for Pumilio systems that require a valid user }
 	}
 
 \value{
