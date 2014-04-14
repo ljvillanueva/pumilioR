@@ -25,11 +25,19 @@
 \examples{
 	\dontrun{
 	#First, get a list of results
-	results <- getSounds(pumilio_URL="http://pumilio.coquipr.com/pumilio/", 
-		SiteID=111, type="site")
+	results <- getSounds(pumilio_URL = "http://pumilio.coquipr.com/pumilio/", 
+		SiteID = 111, type = "site")
 	
 	#Then, get the file from the first row, identified with the SoundID = 4078
-	getFile(results, SoundID = 4078)}
+	getFile(results, SoundID = 4078)
+	
+	#For Windows, when credentials are needed:
+	#First, get a list of results
+	results <- getSounds(pumilio_URL = "http://pumilio.coquipr.com/pumilio2/", 
+		SiteID = 111, type = "site", credentials = "pumilio:pumilio")
+		
+	setInternet2(TRUE)
+	getFile(results, SoundID = 4078, credentials = "pumilio:pumilio")}
 	}
 
 \note{To use this function, the curl library needs to be installed. 
