@@ -12,14 +12,17 @@ getFile <- function(result, SoundID = NA, credentials = NA){
 		if (!is.na(credentials)){
 			#Fix for Windows systems, rarely is CURL installed and the default way
 			# to download is very limited. This uses Internet Explorer functions
-			setInternet2(TRUE)
+			#setInternet2(TRUE) 
+			#^^^ build of package throws an error since it doesnt exist in Linux
+			# Added to instructions			
 			
 			#Seems only way to give creds is by adding to address
 			soundfilePath <- gsub("http://", paste("http://", credentials, "@", sep = ""), soundfilePath)
-			download.file(soundfilePath, destfile = localfile, mode = "wb")
-		}else{
-			download.file(url = soundfilePath, destfile = localfile, mode = "wb")
 		}
+		#	download.file(soundfilePath, destfile = localfile, mode = "wb")
+		#}else{
+			download.file(url = soundfilePath, destfile = localfile, mode = "wb")
+		#}
 	}else{
 		#Mac and Linux		
 		if (!is.na(credentials)){

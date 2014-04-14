@@ -33,8 +33,12 @@
 	}
 
 \note{To use this function, the curl library needs to be installed. 
-		In Linux install libcurl-devel. For Windows the binaries 
-		are available at http://curl.haxx.se.}
+		In Linux install libcurl-devel. 
+		
+		For Windows, add this line to the script before calling the \code{getFile} function:
+		
+		\code{setInternet2(TRUE)}
+		}
 
 %\references{
  %}

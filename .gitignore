@@ -5,3 +5,4 @@
 .Rbuildignore
 *.wav
 *.flac
+*.Rcheck
