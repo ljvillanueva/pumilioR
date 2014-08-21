@@ -15,7 +15,7 @@ getSites <- function(pumilio_URL, credentials = NA, pumiliologin = NA){
 	
 	pumilio_list <- xmlToList(node = pumilio_XML, addAttributes = TRUE)
 	
-	sites_list <- as.data.frame(t(pumilio_list$Sites), row.names = FALSE)
+	sites_list <- as.data.frame(t(pumilio_list$Sites), row.names = "")
 
 	cat(paste(" \n  Found ", dim(sites_list)[1], " results\n\n", sep=""))
   

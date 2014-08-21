@@ -15,7 +15,7 @@ getCollections <- function(pumilio_URL, credentials = NA, pumiliologin = NA){
 	
 	pumilio_list <- xmlToList(node = pumilio_XML, addAttributes = TRUE)
 	
-	cols_list <- as.data.frame(t(pumilio_list$Collections), row.names = FALSE)
+	cols_list <- as.data.frame(t(pumilio_list$Collections), row.names = "")
 	
 	cat(paste(" \n  Found ", dim(cols_list)[1], " results\n\n", sep=""))
   

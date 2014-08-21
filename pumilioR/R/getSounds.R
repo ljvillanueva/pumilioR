@@ -22,7 +22,7 @@ getSounds <- function(pumilio_URL, SiteID = NA, ColID = NA, type = "all", creden
 	sounds_list <- xmlToList(node = this_site_sounds, addAttributes = TRUE)
 	
 	#Get sounds from parsed XML
-	sound_list <- as.data.frame(t(sounds_list$Sounds), row.names = FALSE)
+	sound_list <- as.data.frame(t(sounds_list$Sounds), row.names = "")
 	
 	cat(paste(" \n  Found ", dim(sound_list)[1], " results\n\n", sep=""))
   
